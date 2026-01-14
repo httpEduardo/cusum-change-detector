@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SignalScout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="eyebrow">CUSUM signal intelligence</p>
+        <h1>SignalScout</h1>
+        <p>Spot change points in a noisy series.</p>
+      </header>
+      <section class="panel">
+        <div class="grid">
+          <label>Threshold
+            <input id="thresholdInput" type="number" value="5" step="0.5" />
+          </label>
+          <label>Drift
+            <input id="driftInput" type="number" value="0.5" step="0.1" />
+          </label>
+        </div>
+        <div class="actions">
+          <button id="analyzeButton">Analyze</button>
+          <button id="seedButton" class="ghost">Load sample series</button>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Detected changes</h2>
+        <ul id="results"></ul>
+      </section>
+    </main>
+    <div class="halo"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
